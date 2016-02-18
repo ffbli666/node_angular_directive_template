@@ -1,0 +1,15 @@
+<div id="tag-list" name="tag-list" class="tag-list" ng-controller="TagListCtrl">
+    <ul>
+        <li ng-repeat="tag in tags">
+            <div class="tag">
+                <span class="name">{{tag.name}}</span>
+                <span class="remove" ng-click="removeTag(tag)">x</span>
+            </div>
+        </li>
+    </ul>
+    <div>
+        <input type=text class="tag-input" placeholder="+" ng-keydown="input($event)" ng-model="tagText">
+        <button type="button" class="btn btn-primary" ng-click="addTag()">Add Tags</button>
+        <button type="button" class="btn btn-primary" ng-click="getTags()">Get Tags</button>
+    </div>
+</div>
